@@ -40,5 +40,5 @@ jobs:
         platforms: linux/amd64,linux/arm64
         push: true
         tags: |
-          devopswithsam/githubactions:latest
-          devopswithsam/githubactions:${{ github.run_number }}
+          lzungri/oracleascontainer:latest
+          lzungri/oracleascontainer:${{ github.run_number }}
