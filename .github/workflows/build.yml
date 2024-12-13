@@ -5,9 +5,6 @@ on:
     branches:
       - "main"
 
-env:
-  AWS_ACCESS_KEY_ID: '${{ secrets.AWS_ACCESS_KEY_ID }}'
-  AWS_SECRET_ACCESS_KEY: '${{ secrets.AWS_SECRET_ACCESS_KEY }}'
 
 jobs:
   docker:
@@ -52,3 +49,7 @@ jobs:
         push: true
         tags: |
           lzungri/oracleascontainer:latest
+        build-args: |
+          AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} 
+          AWS_SECRET_ACCESS_KE=${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
