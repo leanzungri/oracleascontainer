@@ -40,6 +40,10 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
 
+    - name: Copy contents from S3 to buildspace
+      run: |
+        aws s3 cp s3://ocidatapump/IT.dmp  .
+
     - name: Build and push
       uses: docker/build-push-action@v5
       with:
@@ -49,7 +53,3 @@ jobs:
         push: true
         tags: |
           lzungri/oracleascontainer:latest
-        build-args: |
-          AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} 
-          AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
