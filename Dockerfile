@@ -18,6 +18,10 @@ EOF
 
 #Esta línea seria reemplazada por RUN aws s3 cp
 #COPY --chown=oracle:oinstall --chmod=644 IT.dmp ${DATAPUMPDIR}
+
+ARG AWS_ACCESS_KEY_ID
+ARG AWS_SECRET_ACCESS_KEY
+
 RUN <<EOF
 cd ${DATAPUMPDIR}
 aws s3 cp s3://ocidatapump/IT.dmp  .
