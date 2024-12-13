@@ -1,4 +1,4 @@
-FROM oracledb:19.21.0.0 as base
+FROM container-registry.oracle.com/database/enterprise_ru:19.21.0.0 as base
 
 ENV DATAPUMPDIR=/opt/oracle/datapump
 
