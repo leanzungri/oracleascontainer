@@ -16,6 +16,9 @@ unzip awscliv2.zip
 ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update
 EOF
 
+ARG AWS_ACCESS_KEY_ID=${{ AWS_ACCESS_KEY_ID }}
+ARG AWS_SECRET_ACCESS_KEY=${{ AWS_SECRET_ACCESS_KEY }}
+ARG AWS_REGION=us-east-1
 #Esta línea seria reemplazada por RUN aws s3 cp
 #COPY --chown=oracle:oinstall --chmod=644 IT.dmp ${DATAPUMPDIR}
 RUN <<EOF
