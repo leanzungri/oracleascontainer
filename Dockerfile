@@ -10,6 +10,7 @@ EOF
 COPY --chown=oracle:oinstall --chmod=644 IT.dmp ${DATAPUMPDIR}
 
 #Set Asuncion TZ
+USER root
 ENV TZ=America/Asuncion
 RUN <<EOF
 cd /etc
