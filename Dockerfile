@@ -13,6 +13,5 @@ COPY --chown=oracle:oinstall --chmod=644 IT.dmp ${DATAPUMPDIR}
 ENV TZ=America/Asuncion
 RUN <<EOF
 cd /etc
-unlink localtime
 ln -fs ../usr/share/zoneinfo/America/Asuncion localtime
 EOF
