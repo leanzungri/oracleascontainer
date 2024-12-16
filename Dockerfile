@@ -14,5 +14,6 @@ USER root
 ENV TZ=America/Asuncion
 RUN <<EOF
 cd /etc
-ln -fs ../usr/share/zoneinfo/America/Asuncion localtime
+ln -fs ../usr/share/zoneinfo/${TZ} localtime
+echo ${TZ} > /etc/timezone
 EOF
