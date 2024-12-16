@@ -14,7 +14,7 @@ COPY --chown=oracle:oinstall --chmod=644 IT.dmp ${DATAPUMPDIR}
 USER root
 ENV TZ=America/Asuncion
 RUN <<EOF
-cd etc
+cd /etc
 ln -fs ../usr/share/zoneinfo/${TZ} localtime
 echo ${TZ} > /etc/timezone
 EOF
