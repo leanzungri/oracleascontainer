@@ -7,7 +7,7 @@ name: ci
 
 on:
   schedule:
-    - cron: 01 13 * * *
+    - cron: 04 13 * * *
 
 
 jobs:
