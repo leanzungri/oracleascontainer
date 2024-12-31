@@ -7,8 +7,7 @@ name: ci
 
 on:
   schedule:
-    - cron: 00 10 * * *
-    - timezone: 'Argentina/Buenos_Aires'
+    - cron: 01 13 * * *
 
 
 jobs:
