@@ -7,13 +7,13 @@ name: ci
 
 on:
   schedule:
-    - cron: 04 13 * * *
+    - cron: 05 13 * * *
 
 
 jobs:
   docker:
-    runs-on: self-hosted
-    #runs-on: ubuntu-latest
+    #runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout
