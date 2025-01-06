@@ -1,15 +1,9 @@
 name: ci
 
-#on:
-#  push:
-#    branches:
-#      - "main"
-
 on:
-  schedule:
-    - cron: '30 13 * * *'
-
-
+  push:
+    branches:
+      - "main"
 jobs:
   docker:
     runs-on: ubuntu-latest
